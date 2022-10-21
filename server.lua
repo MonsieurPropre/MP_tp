@@ -20,15 +20,3 @@ ESX.RegisterServerCallback("MP:tp", function(source, cb, id, coords)
     end
     
 end)
-
-
-ESX.RegisterServerCallback("MP:tpa", function(source, cb, id)
-    local _src = source
-    local xPlayer = ESX.GetPlayerFromId(id)
-    if xPlayer then
-        TriggerClientEvent("MP:tak", id)
-        cb(true)
-    else
-        cb(false)
-    end
-end)
